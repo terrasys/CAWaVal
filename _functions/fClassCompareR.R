@@ -110,8 +110,8 @@ set.seed(777)
 acc.m <- fClassAcc(actual=o$G01_MAX, predicted=o$CLASS)
 setwd(file.path(W.DIR,OUT.DIR))
 write.csv2(acc.m$ConfusionMatrix, 
-           file = paste(CLASS.SHP,"_CM.csv"))
+           file = paste(CLASS.SHP,"__",CLASS.RASTER,"_CM.csv"))
 write.csv2(acc.m$AccMetrics, 
-           file = paste(CLASS.SHP,"_AM.csv"))
+           file = paste(CLASS.SHP,"__",CLASS.RASTER,"_AM.csv"))
 
 }
